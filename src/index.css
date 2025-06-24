@@ -5,9 +5,42 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #e9ecef; /* Warna latar belakang aplikasi */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Gaya umum untuk semua elemen form */
+input, select, button {
+  font-family: inherit; /* Menggunakan font dari body */
+}
+
+button:hover {
+  opacity: 0.9; /* Efek hover sederhana */
+}
+
+/* Atur ulang margin dan padding untuk elemen root App */
+#root, .App {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box; /* Pastikan padding tidak menambah ukuran */
+}
+
+/* Menyembunyikan spinner pada input number */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  appearance: textfield;
+  -webkit-appearance: none;
+  -moz-appearance: textfield; /* Firefox */
 }
